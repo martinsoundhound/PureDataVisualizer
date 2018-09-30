@@ -1,0 +1,53 @@
+#N canvas 850 311 562 437 10;
+#X obj 173 225 spigot;
+#X obj 210 122 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 178 246 5 0 0 0 - - -, f 5;
+#X obj 224 172 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 210 204 5 0 0 0 - - -, f 5;
+#X obj 157 104 inlet;
+#X obj 178 412 outlet;
+#X floatatom 157 191 5 0 0 0 - - -, f 5;
+#X obj 232 296 line;
+#X obj 248 236 pack \$1;
+#X obj 210 92 loadbang;
+#X text 55 99 Amplitude input;
+#X floatatom 177 385 5 0 0 0 - - -, f 5;
+#X floatatom 180 309 5 0 0 0 - - -, f 5;
+#X msg 231 269 \$1;
+#X obj 307 329 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 272 271 20;
+#X obj 177 363 moses 5;
+#X obj 309 210 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 348 216 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 209 151 metro 20;
+#X obj 314 174 t b b b;
+#X msg 341 264 20;
+#X connect 0 0 2 0;
+#X connect 1 0 20 0;
+#X connect 2 0 13 0;
+#X connect 3 0 4 0;
+#X connect 3 0 14 0;
+#X connect 3 0 21 0;
+#X connect 4 0 0 1;
+#X connect 5 0 7 0;
+#X connect 7 0 0 0;
+#X connect 8 0 13 0;
+#X connect 9 0 14 0;
+#X connect 10 0 1 0;
+#X connect 12 0 6 0;
+#X connect 13 0 17 0;
+#X connect 14 0 8 0;
+#X connect 16 0 8 1;
+#X connect 16 0 15 0;
+#X connect 17 0 12 0;
+#X connect 19 0 16 0;
+#X connect 20 0 3 0;
+#X connect 21 0 18 0;
+#X connect 21 1 19 0;
+#X connect 21 2 22 0;
+#X connect 22 0 8 2;

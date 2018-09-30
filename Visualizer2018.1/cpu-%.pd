@@ -1,0 +1,32 @@
+#N canvas 191 194 302 278 16;
+#X obj 104 38 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 101 102 3 0 0 1 cpu - -;
+#N canvas 352 143 199 303 cpu-calc 0;
+#X obj 53 157 cputime;
+#X obj 94 22 loadbang;
+#X obj 53 101 metro 1000;
+#X msg 94 50 1;
+#X obj 53 129 t b b;
+#X obj 53 217 * 0.1;
+#X obj 53 186 int;
+#X obj 54 245 outlet;
+#X obj 54 76 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 43 22 inlet;
+#X connect 0 0 6 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 8 0;
+#X connect 4 0 0 0;
+#X connect 4 1 0 1;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 8 0 2 0;
+#X connect 9 0 8 0;
+#X restore 103 60 pd cpu-calc;
+#X obj 104 0 r meters;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
+#X coords 0 -1 1 1 64 21 2 100 100;

@@ -1,0 +1,19 @@
+#N canvas 0 22 831 399 16;
+#X obj 73 243 scale 0 127 0 10000;
+#X obj 76 199 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 74 321 5 0 0 0 - - -;
+#X text 77 169 0 - 127 IN;
+#X text 135 319 0 - 10000 OUT;
+#X obj 333 242 maxlib/scale 0 127 0 10000;
+#X text 363 163 if you're working in Pd-Extended \; you'll need to
+specify the maxlib/scale \; library to get scale to work;
+#X text 259 36 scale takes a two number pair \; and maps that number
+scale \; to another number scale specified \; by the second pair of
+numbers;
+#X floatatom 335 314 5 0 0 0 - - -;
+#X text 396 312 0 - 10000 OUT;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 0 5 0;
+#X connect 5 0 8 0;
